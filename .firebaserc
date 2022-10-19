@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medfiszki": {
+      "hosting": {
+        "MedFiszki": [
+          "medfiszki"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medfiszki"
+  }
+}

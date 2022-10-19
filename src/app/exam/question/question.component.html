@@ -1,0 +1,49 @@
+<div class="my-4">
+  <div
+    class="card"
+    [ngClass]="{
+      'bg-success': status == 1,
+      'bg-danger': status == 2
+    }"
+  >
+    <div class="card-body">
+      <form autocomplete="off">
+        <div class="mb-3">
+          <p class="lead">{{ item.Question }}</p>
+        </div>
+        <div class="mb-3">
+          <label for="inputAnswer" class="form-label">Odpowiedź:</label>
+          <input
+            name="inputAnswer"
+            type="text"
+            #input
+            class="form-control"
+            id="inputAnswer"
+            #inputAnswer
+          />
+        </div>
+        <div>
+          <p *ngIf="status == 2" class="card-text">
+            Prawidłowa odpowiedź to: {{ item.Answer }}
+          </p>
+          <p *ngIf="status == 1" class="card-text">Prawidłowa odpowiedź!</p>
+        </div>
+          <button
+            type="button"
+            class="btn btn-primary mx-1"
+            (click)="onCheckAnswer(inputAnswer.value, item.Answer)"
+          >
+            Sprawdź
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-warning mx-1"
+            (click)="status = 0; inputAnswer.value = ''"
+          >
+            Wyczyść
+          </button>
+      </form>
+    </div>
+  </div>
+</div>
