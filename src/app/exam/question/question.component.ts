@@ -20,7 +20,7 @@ export class QuestionComponent implements OnInit {
   }
 
   onCheckAnswer(answerValue: string, question: string) {
-    this.status = answerValue == question ? 1 : 2;
+    this.status = answerValue.trim() == question.trim() ? 1 : 2;
   }
 
 }
