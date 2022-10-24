@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ExamQuestions } from 'src/model/ExamQuestions';
+import { AnatomyTranslations } from 'src/model/AnatomyTranslations';
 
 @Component({
   selector: 'app-question',
@@ -8,7 +8,7 @@ import { ExamQuestions } from 'src/model/ExamQuestions';
 })
 export class QuestionComponent implements OnInit {
 
-  @Input() item:ExamQuestions = {'Answer':'', Question:''}
+  @Input() item:AnatomyTranslations = {id: 0, inPolish:'', inEnglish:'', category:0, part:0}
 
   correctStyle= "bg-success"
   incorrectStyle= "bg-danger"
