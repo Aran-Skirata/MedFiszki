@@ -9,7 +9,7 @@
     <div class="card-body">
       <form autocomplete="off">
         <div class="mb-3">
-          <p class="lead">{{ item.Question }}</p>
+          <p class="lead">{{ item.inPolish }}</p>
         </div>
         <div class="mb-3">
           <label for="inputAnswer" class="form-label">Odpowiedź:</label>
@@ -24,14 +24,14 @@
         </div>
         <div>
           <p *ngIf="status == 2" class="card-text">
-            Prawidłowa odpowiedź to: {{ item.Answer }}
+            Prawidłowa odpowiedź to: {{ item.inEnglish }}
           </p>
           <p *ngIf="status == 1" class="card-text">Prawidłowa odpowiedź!</p>
         </div>
           <button
             type="button"
             class="btn btn-primary mx-1"
-            (click)="onCheckAnswer(inputAnswer.value, item.Answer)"
+            (click)="onCheckAnswer(inputAnswer.value, item.inEnglish)"
           >
             Sprawdź
           </button>
