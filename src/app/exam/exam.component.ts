@@ -12,7 +12,7 @@ import { Pagination } from 'src/model/Pagination';
 })
 export class ExamComponent implements OnInit {
 
-  anatomyTranslations: AnatomyTranslations[];
+  anatomyTranslations: AnatomyTranslations[] = [];
   pagination: Pagination;
   pageNumber: number = 1;
   pageSize: number = 10;
@@ -26,7 +26,6 @@ export class ExamComponent implements OnInit {
   constructor( private _medFiszkiApi: MedFiszkiApiService,private _activatedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
-    
     this.paramsSub = this._activatedRoute.paramMap.subscribe(params => {
       this.categoryId = Number(params.get('categoryId'));
       this.partId = Number(params.get('partId'));
@@ -36,20 +35,22 @@ export class ExamComponent implements OnInit {
 
   loadAnatomyTranslations() {
 
-    this._medFiszkiApi.getAnatomyTranslations(this.categoryId, this.partId, this.pageNumber, this.pageSize).subscribe(response => {
-      this.anatomyTranslations = response.result;
-      this.pagination = response.pagination;
-    })
-
-    console.log(this.pagination);
-
+      this._medFiszkiApi.getAnatomyTranslations(this.categoryId, this.partId, this.pageNumber, this.pageSize).subscribe(response => {
+        this.anatomyTranslations = response.result;
+        this.pagination = response.pagination;
+      })
   }
 
   pageChanged(event: any) {
 
-    this.pageNumber=event.page;
+    this.pageNumber=event;
     this.loadAnatomyTranslations();
 
+  }
+
+  pageSizeChanged(event:any) {
+    this.pageSize = event;
+    this.loadAnatomyTranslations();
   }
 
   ngOnDestroy(): void 

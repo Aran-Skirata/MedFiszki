@@ -12,37 +12,24 @@
           <p class="lead">{{ item.inPolish }}</p>
         </div>
         <div class="mb-3">
-          <label for="inputAnswer" class="form-label">Odpowiedź:</label>
-          <input
-            name="inputAnswer"
-            type="text"
-            #input
-            class="form-control"
-            id="inputAnswer"
-            #inputAnswer
-          />
+          <nz-alert *ngIf="status == 4" nzType="warning" nzMessage="Uzupełnij pole!" nzShowIcon></nz-alert>
+          <nz-input-group [nzPrefix]="Template">
+          <input #inputAnswer  name="inputAnswer" type="text" nz-input placeholder="Odpowiedź"/>
+            <ng-template #Template>
+              <span *ngIf="status == 1" nz-icon nzType="smile" nzTheme="outline"></span>
+              <span *ngIf="status == 2" nz-icon nzType="meh" nzTheme="outline" ></span>
+            </ng-template>
+          </nz-input-group>
         </div>
         <div>
-          <p *ngIf="status == 2" class="card-text">
+          <p *ngIf="status == 2" class="card-text mb-3 mx-3">
             Prawidłowa odpowiedź to: {{ item.inEnglish }}
           </p>
-          <p *ngIf="status == 1" class="card-text">Prawidłowa odpowiedź!</p>
+          <p *ngIf="status == 1" class="card-text mb-3 mx-3">Prawidłowa odpowiedź!</p>
+          <!-- <p *ngIf="status == 4" class="card-text mb-3 mx-3 border border-warning border-2 rounded-pill"><span class="mx-3">Uzupełnij pole!</span></p> -->
         </div>
-          <button
-            type="button"
-            class="btn btn-primary mx-1"
-            (click)="onCheckAnswer(inputAnswer.value, item.inEnglish)"
-          >
-            Sprawdź
-          </button>
-
-          <button
-            type="button"
-            class="btn btn-outline-warning mx-1"
-            (click)="status = 0; inputAnswer.value = ''"
-          >
-            Wyczyść
-          </button>
+          <button nz-button nzType="primary" nzSize="large" nzShape="round" (click)="onCheckAnswer(inputAnswer.value,item.inEnglish)">Sprawdź</button>
+          <button nz-button style="margin-left: 0.5rem;" nzType="default" nzSize='large'nzShape="circle"><span nz-icon nzType="clear" (click)="status = 0; inputAnswer.value = ''" ></span></button>
       </form>
     </div>
   </div>

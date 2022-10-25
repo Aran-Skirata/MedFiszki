@@ -20,7 +20,11 @@ export class QuestionComponent implements OnInit {
   }
 
   onCheckAnswer(answerValue: string, question: string) {
-    this.status = answerValue.trim() == question.trim() ? 1 : 2;
+    if(answerValue.length > 0)
+        this.status = answerValue.trim().toLowerCase() == question.trim().toLowerCase() ? 1 : 2;
+    else {
+      this.status = 4;
+    }
   }
 
 }

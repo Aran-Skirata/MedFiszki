@@ -8,7 +8,22 @@ import { ExamComponent } from './exam/exam.component';
 import { FormsModule } from '@angular/forms';
 import { QuestionComponent } from './exam/question/question.component';
 import {HttpClientModule} from '@angular/common/http'
-import {PaginationModule} from 'ngx-bootstrap/pagination'
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NzPaginationModule } from 'ng-zorro-antd/pagination'
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header'
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { TopicComponent } from './home/topic/topic.component';
+
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -16,16 +31,27 @@ import {PaginationModule} from 'ngx-bootstrap/pagination'
     HomeComponent,
     ErrorComponent,
     ExamComponent,
-    QuestionComponent
+    QuestionComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    PaginationModule.forRoot()
+    BrowserAnimationsModule,
+    NzPaginationModule,
+    NzPageHeaderModule,
+    NzButtonModule,
+    NzIconModule,
+    NzInputModule,
+    NzAlertModule,
+    NzSpinModule
+    
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
