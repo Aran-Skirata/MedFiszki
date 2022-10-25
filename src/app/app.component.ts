@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MedFiszki';
+
+  onBack() {
+    console.log('on  backs');
+  }
 }

@@ -1,0 +1,18 @@
+<div class="card mx-1 my-3 p-3">
+  <img
+    [src]="imgUrl"
+    class="card-img"
+    style="max-height: 18rem"
+    alt="Błąd wczytywania obrazu"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ topicTitle }}</h5>
+    <p class="card-text">
+      {{ topicDsc }}
+    </p>
+    <button [routerLink]="Link" nz-button nzType="primary" nzShape="round" nzSize="large">
+      Rozpocznij
+      <span nz-icon nzType="right"></span>
+    </button>
+  </div>
+</div>

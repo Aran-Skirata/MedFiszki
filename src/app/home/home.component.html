@@ -1,89 +1,44 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-6">
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-vector/human-with-muscle-diagram_1308-40903.jpg?w=826&t=st=1666286590~exp=1666287190~hmac=7a18907aa75bb1e3e771869dce484f06c7e15566ee765662a3cfd2389ffa21c1"
-          class="card-img-top"
-          style="max-height:26rem;"
-          alt="Spooky Scary Skeleton"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Mięśnie kończyny górnej pl/ang</h5>
-          <p class="card-text">
-            Sprawdzanie więdzy z nazewnictwa angielskiego mięśni i nerwów
-          </p>
-          <a [routerLink]="['/exam','2','1']" class="btn btn-primary">Rozpocznij</a>
-        </div>
-      </div>
+    <div class="col-sm-6 col-lg-4">
+      <app-topic
+        topicTitle="Mięśnie kończyny górnej Pol/Ang"
+        topicDsc="Tłumaczenie mięśni kończyny górnej z polskiego na angielski"
+        [Link]="['/exam', '2', '1']"
+        imgUrl="assets/images/muscularsystem.jpg"
+      ></app-topic>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-vector/sketchy-osseous-system_23-2147542360.jpg?w=1060&t=st=1666286437~exp=1666287037~hmac=e6b937e49c5d49e3c91a1ca1a8d2f47f04f1e805cc284c8cbde990c8bb9fa677"
-          class="card-img-top"
-          style="max-height:26rem;"
-          alt="Spooky Scary Skeleton"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Nerwy kończyny górnej pl/ang</h5>
-          <p class="card-text">
-            Sprawdzanie wiedzy z nazewnictwa angielskiego układu kostego
-          </p>
-          <a [routerLink]="['/exam','3','1']" class="btn btn-primary">Rozpocznij</a>
-        </div>
-      </div>
+    <div class="col-sm-6 col-lg-4">
+      <app-topic
+        topicTitle="Nerwy kończyny górnej Pol/Ang"
+        topicDsc="Tłumaczenia części układu nerwowego kończyny górnej z polskiego na angielski"
+        [Link]="['/exam', '3', '1']"
+        imgUrl="assets/images/nervoussystem.jpg"
+      ></app-topic>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-vector/sketchy-osseous-system_23-2147542360.jpg?w=1060&t=st=1666286437~exp=1666287037~hmac=e6b937e49c5d49e3c91a1ca1a8d2f47f04f1e805cc284c8cbde990c8bb9fa677"
-          class="card-img-top"
-          style="max-height:26rem;"
-          alt="Spooky Scary Skeleton"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Układ kostny kończyny górnej pl/ang</h5>
-          <p class="card-text">
-            Sprawdzanie wiedzy z nazewnictwa angielskiego układu kostego
-          </p>
-          <a [routerLink]="['/exam','4','1']" class="btn btn-primary">Rozpocznij</a>
-        </div>
-      </div>
+    <div class="col-sm-6 col-lg-4">
+      <app-topic
+        topicTitle="Układ kostny kończyny górnej Pol/Ang"
+        topicDsc="Tłumaczenie kości kończyny górnej z polskiego na angielski"
+        [Link]="['/exam', '4', '1']"
+        imgUrl="assets/images/skeleton.jpg"
+      ></app-topic>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-vector/sketchy-osseous-system_23-2147542360.jpg?w=1060&t=st=1666286437~exp=1666287037~hmac=e6b937e49c5d49e3c91a1ca1a8d2f47f04f1e805cc284c8cbde990c8bb9fa677"
-          class="card-img-top"
-          style="max-height:26rem;"
-          alt="Spooky Scary Skeleton"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Układ kostny kończyny dolnej pl/ang</h5>
-          <p class="card-text">
-            Sprawdzanie wiedzy z nazewnictwa angielskiego układu kostego
-          </p>
-          <a [routerLink]="['/exam','4','2']" class="btn btn-primary">Rozpocznij</a>
-        </div>
-      </div>
+    <div class="col-sm-6 col-lg-4">
+      <app-topic
+        topicTitle="Układ kostny kończyny dolnej Pol/Ang"
+        topicDsc="Tłumaczenie kości kończyny dolnej z polskiego na angielski"
+        [Link]="['/exam', '4', '2']"
+        imgUrl="assets/images/skeleton.jpg"
+      ></app-topic>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-vector/human-internal-organ-with-heart_1308-108529.jpg?w=1060&t=st=1666286086~exp=1666286686~hmac=01196d4be88a1e22ddb95c7df94b381a7f85d7af88c8c402531553809d730d17"
-          class="card-img-top"
-          style="max-height:26rem;"
-          alt="Spooky Scary Skeleton"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Układ krwionośny kończyny górnej pl/ang</h5>
-          <p class="card-text">
-            Sprawdzanie wiedzy z nazewnictwa angielskiego układu krwionośnego kończnyny górnej
-          </p>
-          <a [routerLink]="['/exam', '1','1']" class="btn btn-primary">Rozpocznij</a>
-        </div>
-      </div>
+    <div class="col-sm-6 col-lg-4">
+      <app-topic
+        topicTitle="Układ krwionośny kończyny górnej Pol/Ang"
+        topicDsc="Tłumaczenia części układu krwionośnego kończyny dolnej z polskiego na angielski"
+        [Link]="['/exam', '1', '1']"
+        imgUrl="assets/images/circulatorysystem.jpg"
+      ></app-topic>
     </div>
   </div>
 </div>
