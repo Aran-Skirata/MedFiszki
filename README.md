@@ -2,4 +2,4 @@
 
 Prosta aplikacja do nauki angielskich pojęć anatomicznych.
 
-https://medfiszki.web.app/home
+https://medfiszki.herokuapp.com/home
