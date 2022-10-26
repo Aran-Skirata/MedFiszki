@@ -29,7 +29,8 @@
           <!-- <p *ngIf="status == 4" class="card-text mb-3 mx-3 border border-warning border-2 rounded-pill"><span class="mx-3">Uzupełnij pole!</span></p> -->
         </div>
           <button nz-button nzType="primary" nzSize="large" nzShape="round" (click)="onCheckAnswer(inputAnswer.value,item.inEnglish)">Sprawdź</button>
-          <button nz-button style="margin-left: 0.5rem;" nzType="default" nzSize='large'nzShape="circle"><span nz-icon nzType="clear" (click)="status = 0; inputAnswer.value = ''" ></span></button>
+          <button nz-button nz-tooltip nzTooltipTitle="Wyczyść" nzTooltipPlacement="bottom" [nzTooltipMouseEnterDelay]="1" style="margin-left: 0.5rem;" nzType="default" nzSize='large'nzShape="circle" (click)="status = 0; inputAnswer.value = ''"><span nz-icon nzType="clear"></span></button>
+          <button nz-button nz-tooltip nzTooltipTitle="Wyświetl odpowiedź" nzTooltipPlacement="right" [nzTooltipMouseEnterDelay]="1" style="margin-left: 0.5rem;" nzType="default" nzSize='large' nzShape="circle" (click)="inputAnswer.value = item.inEnglish"><span nz-icon nzType="question" nzTheme="outline"></span></button>
       </form>
     </div>
   </div>

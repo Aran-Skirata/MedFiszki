@@ -21,6 +21,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { TopicComponent } from './home/topic/topic.component';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+
 
 
 registerLocaleData(en);
@@ -46,7 +48,8 @@ registerLocaleData(en);
     NzIconModule,
     NzInputModule,
     NzAlertModule,
-    NzSpinModule
+    NzSpinModule,
+    NzToolTipModule
     
   ],
   providers: [
