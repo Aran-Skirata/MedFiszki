@@ -4,9 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
-import { ExamComponent } from './exam/exam.component';
+import { AnatomyTranslationsComponent } from './anatomy-translations/anatomy-translations.component';
 import { FormsModule } from '@angular/forms';
-import { QuestionComponent } from './exam/question/question.component';
+import { QuestionComponent } from './anatomy-translations/question/question.component';
 import {HttpClientModule} from '@angular/common/http'
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
@@ -32,7 +32,7 @@ registerLocaleData(en);
     AppComponent,
     HomeComponent,
     ErrorComponent,
-    ExamComponent,
+    AnatomyTranslationsComponent,
     QuestionComponent,
     TopicComponent
   ],

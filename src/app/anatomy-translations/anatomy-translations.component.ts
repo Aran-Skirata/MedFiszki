@@ -7,10 +7,10 @@ import { Pagination } from 'src/model/Pagination';
 
 @Component({
   selector: 'app-exam',
-  templateUrl: './exam.component.html',
-  styleUrls: ['./exam.component.css']
+  templateUrl: './anatomy-translations.component.html',
+  styleUrls: ['./anatomy-translations.component.css']
 })
-export class ExamComponent implements OnInit {
+export class AnatomyTranslationsComponent implements OnInit {
 
   anatomyTranslations: AnatomyTranslations[] = [];
   pagination: Pagination;
