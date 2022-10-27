@@ -22,6 +22,7 @@ import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { TopicComponent } from './home/topic/topic.component';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { RandomCardComponent } from './random-card/random-card.component';
 
 
 
@@ -34,7 +35,8 @@ registerLocaleData(en);
     ErrorComponent,
     AnatomyTranslationsComponent,
     QuestionComponent,
-    TopicComponent
+    TopicComponent,
+    RandomCardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ registerLocaleData(en);
     NzInputModule,
     NzAlertModule,
     NzSpinModule,
-    NzToolTipModule
+    NzToolTipModule,
     
   ],
   providers: [

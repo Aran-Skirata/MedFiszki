@@ -16,9 +16,6 @@ export class AnatomyTranslationsComponent implements OnInit {
   pagination: Pagination;
   pageNumber: number = 1;
   pageSize: number = 10;
-  correctStyle:string = "bg-success"
-  incorrectStyle:string = "bg-danger"
-  status:Number;
   paramsSub:any;
   categoryId:number;
   partId:number;

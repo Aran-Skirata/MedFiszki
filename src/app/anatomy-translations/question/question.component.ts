@@ -8,7 +8,7 @@ import { AnatomyTranslations } from 'src/model/AnatomyTranslations';
 })
 export class QuestionComponent implements OnInit {
 
-  @Input() item:AnatomyTranslations = {id: 0, inPolish:'', inEnglish:'', category:0, part:0}
+  @Input() item:AnatomyTranslations;
 
   correctStyle= "bg-success"
   incorrectStyle= "bg-danger"
