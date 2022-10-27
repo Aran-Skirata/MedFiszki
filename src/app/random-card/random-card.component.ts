@@ -25,8 +25,7 @@ export class RandomCardComponent implements OnInit {
   }
 
   getRandomItem() {
-
-    this.loadAnatomyTranslations();
+    window.location.reload()
   }
 
 }
