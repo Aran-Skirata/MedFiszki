@@ -38,4 +38,10 @@ export class MedFiszkiApiService {
     )
     
   }
+
+  getRandomAnatomyTranslation() {
+
+    return this.http.get<AnatomyTranslations>(environment.baseUrl + 'AnatomyTranslation/random');
+
+  }
 }

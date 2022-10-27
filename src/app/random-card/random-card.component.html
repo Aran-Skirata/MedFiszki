@@ -1,0 +1,24 @@
+<div
+  *ngIf="!anatomyQuestion"
+  class="container d-flex my-5 justify-content-center"
+>
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>
+<div *ngIf="anatomyQuestion" class="container">
+    <app-question [item]="anatomyQuestion"></app-question>
+    <div class="d-flex justify-content-end mx-4 py-1">
+      <button
+      nz-button
+      nz-tooltip 
+      nzTooltipTitle="Nowa fiszka" 
+      nzTooltipPlacement="bottom"
+      [nzTooltipMouseEnterDelay]="1"
+      nzType="primary"
+      nzSize="large"
+      nzShape="circle"
+      (click)="getRandomItem()"
+    >
+    <span nz-icon nzType="reload" nzTheme="outline"></span>
+    </button>
+    </div>
+</div>
