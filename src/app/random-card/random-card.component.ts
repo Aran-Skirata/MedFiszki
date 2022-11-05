@@ -8,7 +8,7 @@ import { MedFiszkiApiService } from '../services/med-fiszki-api.service';
   styleUrls: ['./random-card.component.css']
 })
 export class RandomCardComponent implements OnInit {
-  anatomyQuestion: AnatomyTranslations;
+  anatomyQuestion?: AnatomyTranslations;
 
   constructor( private _medFiszkiApi: MedFiszkiApiService) { 
   }
@@ -24,8 +24,8 @@ export class RandomCardComponent implements OnInit {
       })
   }
 
-  getRandomItem() {
-    window.location.reload()
+  reloadRandomItem() {
+    this.anatomyQuestion = undefined;
+    this.loadAnatomyTranslations();
   }
-
 }
